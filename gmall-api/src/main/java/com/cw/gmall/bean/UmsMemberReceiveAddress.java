@@ -1,4 +1,4 @@
-package com.cw.gmall.user.bean;
+package com.cw.gmall.bean;
 
 import javax.persistence.Id;
 import java.io.Serializable;

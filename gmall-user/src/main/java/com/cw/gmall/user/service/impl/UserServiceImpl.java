@@ -1,13 +1,14 @@
 package com.cw.gmall.user.service.impl;
 
-import com.cw.gmall.user.bean.UmsMember;
-import com.cw.gmall.user.bean.UmsMemberReceiveAddress;
+
+
+import com.cw.gmall.bean.UmsMember;
+import com.cw.gmall.bean.UmsMemberReceiveAddress;
+import com.cw.gmall.service.UserService;
 import com.cw.gmall.user.mapper.UserAddressMapper;
 import com.cw.gmall.user.mapper.UserMapper;
-import com.cw.gmall.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
 
@@ -18,15 +19,11 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements UserService {
 
-    final
+    @Autowired
     UserMapper userMapper;
 
     @Autowired
     UserAddressMapper userAddressMapper;
-
-    public UserServiceImpl(UserMapper userMapper) {
-        this.userMapper = userMapper;
-    }
 
     @Override
     public List<UmsMember> getAllUser() {

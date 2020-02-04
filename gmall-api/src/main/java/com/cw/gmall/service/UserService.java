@@ -1,7 +1,8 @@
-package com.cw.gmall.user.service;
+package com.cw.gmall.service;
 
-import com.cw.gmall.user.bean.UmsMember;
-import com.cw.gmall.user.bean.UmsMemberReceiveAddress;
+
+import com.cw.gmall.bean.UmsMember;
+import com.cw.gmall.bean.UmsMemberReceiveAddress;
 
 import java.util.List;
 
