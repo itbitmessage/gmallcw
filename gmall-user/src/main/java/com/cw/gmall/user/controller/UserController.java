@@ -26,18 +26,14 @@ public class UserController {
     @GetMapping("getUmsMemberReceiveAddressByIdUser")
     public List<UmsMemberReceiveAddress> getUmsMemberReceiveAddressById( String memberId){
 
-        List<UmsMemberReceiveAddress> umsMemberReceiveAddresses = userService.getUmsMemberReceiveAddressById(memberId);
-
-        return umsMemberReceiveAddresses;
+        return userService.getUmsMemberReceiveAddressById(memberId);
     }
 
     @ResponseBody
     @GetMapping("searchAllUser")
     public List<UmsMember> searchAllUser(){
 
-        List<UmsMember> umsMembers = userService.getAllUser();
-
-        return umsMembers;
+        return userService.getAllUser();
     }
 
     @ResponseBody

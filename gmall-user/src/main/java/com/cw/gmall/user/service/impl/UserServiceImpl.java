@@ -18,11 +18,15 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements UserService {
 
-    @Autowired
+    final
     UserMapper userMapper;
 
     @Autowired
     UserAddressMapper userAddressMapper;
+
+    public UserServiceImpl(UserMapper userMapper) {
+        this.userMapper = userMapper;
+    }
 
     @Override
     public List<UmsMember> getAllUser() {
